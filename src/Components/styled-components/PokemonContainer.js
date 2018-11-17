@@ -4,7 +4,7 @@ const PokemonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   margin: 10px 0;
 `;
