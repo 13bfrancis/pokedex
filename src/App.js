@@ -11,13 +11,7 @@ const App = () => {
   const [testing, updateTesting] = useState('Pokemon');
   return (
     <ApolloProvider client={client}>
-      <h1
-        onClick={() => {
-          updateTesting(testing + '!!');
-        }}
-      >
-        {testing}
-      </h1>
+      <h1 style={{ textAlign: 'center' }}>{testing}</h1>
       <QueryPokemon />
     </ApolloProvider>
   );
