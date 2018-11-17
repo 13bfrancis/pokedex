@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import QueryPokemon from './Components/QueryPokemon';
@@ -8,10 +8,9 @@ const client = new ApolloClient({
 });
 
 const App = () => {
-  const [testing, updateTesting] = useState('Pokemon');
   return (
     <ApolloProvider client={client}>
-      <h1 style={{ textAlign: 'center' }}>{testing}</h1>
+      <h1 style={{ textAlign: 'center' }}>Pokemon</h1>
       <QueryPokemon />
     </ApolloProvider>
   );

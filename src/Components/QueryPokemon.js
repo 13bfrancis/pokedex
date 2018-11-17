@@ -6,6 +6,7 @@ import PokemonContainer from './styled-components/PokemonContainer';
 import PokemonCard from './styled-components/PokemonCard';
 import List from './styled-components/List';
 import ListType from './styled-components/ListType';
+import PokemonImage from './styled-components/PokemonImage';
 
 export default () => {
   return (
@@ -16,6 +17,7 @@ export default () => {
             id
             name
             pokemonType
+            imageurl
           }
         }
       `}
@@ -26,9 +28,11 @@ export default () => {
 
         return (
           <PokemonContainer>
-            {data.pokemons.map(({ id, name, pokemonType }) => (
+            {data.pokemons.map(({ id, name, pokemonType, imageurl }) => (
               <PokemonCard key={id}>
-                <h2 style={{ textAlign: 'center' }}>{name}</h2>
+                <h2 style={{ textAlign: 'center', flexBasis: '100%' }}>
+                  {name}
+                </h2>
                 <List>
                   {pokemonType.map(pType => (
                     <ListType key={`${name} ${pType}`} pType={pType}>
@@ -36,6 +40,7 @@ export default () => {
                     </ListType>
                   ))}
                 </List>
+                <PokemonImage src={imageurl} />
               </PokemonCard>
             ))}
           </PokemonContainer>
