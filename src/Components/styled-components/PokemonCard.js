@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const PokemonCard = styled.div`
   background: #fff;
+  border-radius: 5%;
   flex-basis: 20%;
   margin: 5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
