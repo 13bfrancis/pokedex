@@ -6,6 +6,5 @@ const PokemonContainer = styled.div`
   flex-direction: row;
   justify-content: space-around;
   width: 100vw;
-  height: 100vh;
 `;
 export default PokemonContainer;

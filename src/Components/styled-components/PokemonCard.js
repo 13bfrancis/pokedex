@@ -5,6 +5,7 @@ const PokemonCard = styled.div`
   flex-basis: 40%;
   margin: 5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  height: 200px;
   @media (max-width: 600px) {
     flex-basis: 80%;
   }
