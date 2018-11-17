@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
+import QueryPokemon from './Components/QueryPokemon';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+const client = new ApolloClient({
+  uri: 'https://api-useast.graphcms.com/v1/cjokh0vvv1e6k01ghjqq60ae0/master'
+});
+
+const App = () => {
+  const [testing, updateTesting] = useState('Pokemon');
+  return (
+    <ApolloProvider client={client}>
+      <h1
+        onClick={() => {
+          updateTesting(testing + '!!');
+        }}
+      >
+        {testing}
+      </h1>
+      <QueryPokemon />
+    </ApolloProvider>
+  );
+};
 
 export default App;
