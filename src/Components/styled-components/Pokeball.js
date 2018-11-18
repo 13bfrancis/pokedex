@@ -9,6 +9,7 @@ const Up = keyframes`
   to {
     transform: translateY(-100%);
     visibility: hidden;
+    display: none;
   }
 `;
 const Down = keyframes`
@@ -18,6 +19,7 @@ const Down = keyframes`
   to {
     transform: translateY(100%);
     visibility: hidden;
+    display: none;
   }
 `;
 
@@ -26,8 +28,10 @@ const Top = styled.div`
   height: 50%;
   position: absolute;
   top: 0;
+  left: 0;
   background: red;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   animation: ${Up} linear 1s forwards;
@@ -37,8 +41,10 @@ const Bottom = styled.div`
   height: 50%;
   position: absolute;
   top: 50%;
+  left: 0;
   background: white;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   animation: ${Down} linear 1s forwards;
