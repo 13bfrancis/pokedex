@@ -5,7 +5,7 @@ import PokemonCard from './styled-components/PokemonCard';
 import List from './styled-components/List';
 import ListType from './styled-components/ListType';
 import PokemonImage from './styled-components/PokemonImage';
-import Pokeball from './styled-components/Pokeball';
+import Pokeball from './Pokeball';
 
 export default ({ data }) => {
   return (
