@@ -9,20 +9,20 @@ import ListType from './styled-components/ListType';
 import PokemonImage from './styled-components/PokemonImage';
 import Pokeball from './styled-components/Pokeball';
 
+const query = gql`
+  {
+    pokemons {
+      id
+      name
+      pokemonType
+      imageurl
+    }
+  }
+`;
+
 export default () => {
   return (
-    <Query
-      query={gql`
-        {
-          pokemons {
-            id
-            name
-            pokemonType
-            imageurl
-          }
-        }
-      `}
-    >
+    <Query query={query}>
       {({ loading, error, data }) => {
         if (loading) return '...Loading!';
         if (error) return 'error';
