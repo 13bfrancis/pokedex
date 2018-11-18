@@ -11,8 +11,8 @@ export default ({ data }) => {
   return (
     <>
       <PokemonContainer>
-        {data.pokemons.map(({ id, name, pokemonType, imageurl }) => (
-          <PokemonCard key={id}>
+        {data.map(({ number, name, pokemonType, imageurl }) => (
+          <PokemonCard key={number}>
             <h2 style={{ textAlign: 'center', flexBasis: '100%' }}>{name}</h2>
             <List>
               {pokemonType.map(pType => (
