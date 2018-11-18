@@ -7,6 +7,7 @@ import PokemonCard from './styled-components/PokemonCard';
 import List from './styled-components/List';
 import ListType from './styled-components/ListType';
 import PokemonImage from './styled-components/PokemonImage';
+import Pokeball from './styled-components/Pokeball';
 
 export default () => {
   return (
@@ -43,6 +44,7 @@ export default () => {
                 <PokemonImage src={imageurl} />
               </PokemonCard>
             ))}
+            <Pokeball />
           </PokemonContainer>
         );
       }}
