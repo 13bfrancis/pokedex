@@ -10,6 +10,7 @@ const client = new ApolloClient({
 const App = () => {
   return (
     <ApolloProvider client={client}>
+      {/* //eventually need to replace the below with a header/nav or whatever */}
       <h1 style={{ textAlign: 'center' }}>Pokemon</h1>
       <QueryPokemon />
     </ApolloProvider>

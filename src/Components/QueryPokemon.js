@@ -21,7 +21,8 @@ export default () => {
       {({ loading, error, data }) => {
         if (loading) return '...Loading!';
         if (error) return 'error';
-
+        //if prop that is passed with search data is defined run filter on it
+        //otherwise do nothing
         return <DisplayPokemon data={data} />;
       }}
     </Query>
